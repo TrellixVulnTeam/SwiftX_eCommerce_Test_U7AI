@@ -1,0 +1,107 @@
+@import "../../sass/sources.scss";
+.cartPage {
+  .cartHeading {
+    margin: 80px 0;
+    text-transform: capitalize;
+    font-size: 30px;
+    span {
+      font-weight: 500;
+      font-size: 19px;
+    }
+  }
+  .items {
+    .item {
+      display: flex;
+      border-top: 1px solid #ccc;
+      justify-content: space-between;
+      position: relative;
+      &:last-of-type {
+        border-bottom: 1px solid #ccc;
+      }
+      & > div:first-of-type {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        .itemCategory {
+          text-transform: capitalize;
+        }
+        .itemName {
+          font-size: 16px;
+        }
+      }
+      & > div:last-of-type {
+        padding: 20px 0;
+        display: flex;
+        .imageContainer {
+          height: 100%;
+          width: 180px;
+          position: relative;
+          display: inline-block;
+          margin-right: 30px;
+
+          img {
+            margin: 0 auto;
+            display: block;
+            height: 120px;
+            width: 135px;
+            object-fit: contain;
+          }
+          .arrowsButtons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            button {
+              @include arrowsButtons;
+              margin: 0;
+            }
+          }
+        }
+        .quantity {
+          display: inline-flex;
+          height: 130px;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 20px;
+          button {
+            @include quantityButtons;
+          }
+        }
+      }
+    }
+    .removeButton {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      i {
+        font-size: 20px;
+        color: #ccc;
+        transition: all 0.2s;
+      }
+      &:hover i {
+        color: #000;
+        animation: rotatingCancelButton 1s ease-in-out;
+      }
+    }
+  }
+
+  .totalPrice {
+    margin: 30px 0;
+    font-size: 20px;
+    span {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+  .checkOutButton {
+    @include greenButton;
+  }
+}

@@ -1,0 +1,74 @@
+@mixin quantityButtons {
+  background-color: transparent;
+  height: 25px;
+  width: 27.5px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #000;
+  outline: 0;
+  cursor: pointer;
+  transition: transform 0.1s;
+  &:active {
+    transform: scale(1.1);
+  }
+  &.disActive {
+    border: 1px solid #ccc;
+    cursor: auto;
+    transform: unset;
+    color: #ccc;
+  }
+}
+@mixin greenButton {
+  padding: 12.5px 37px;
+  font-weight: bold;
+  border: 1px solid #55e080;
+  text-transform: uppercase;
+  outline: 0;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  background-color: #55e080;
+  color: #fff;
+  cursor: pointer;
+  &.disActive {
+    background-color: #adebc0;
+    cursor: auto;
+  }
+}
+
+@mixin arrowsButtons {
+  cursor: pointer;
+  margin: 0 5px;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  transition: transform 0.1s;
+  i {
+    font-size: 19px;
+  }
+  &:active {
+    transform: scale(1.3);
+  }
+  &.disActive {
+    cursor: auto;
+    transform: unset;
+  }
+}
+
+@keyframes rotatingCancelButton {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+}

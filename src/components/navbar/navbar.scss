@@ -1,0 +1,68 @@
+.navbar-container {
+  height: 60px;
+  display: flex;
+  z-index: 100 !important;
+  & > div {
+    height: 100%;
+    width: 50%;
+  }
+  .first {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .last {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .fa-shopping-cart {
+      font-size: 25px;
+      color: #000;
+    }
+    .currencies {
+      margin-right: 20px;
+      position: relative;
+      .btnToggler {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        i {
+          margin-left: 10px;
+          font-size: 15px;
+          &.rotating {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .currencyChangers {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        display: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        background-color: white;
+        z-index: 3;
+        button {
+          background-color: white;
+          display: block;
+          padding: 10px 0;
+          width: 100%;
+          border: 0;
+          outline: 0;
+          cursor: pointer;
+          border: 1px solid transparent;
+        }
+        &.show {
+          display: block;
+          button:hover {
+            border: 1px solid #ddd;
+          }
+        }
+      }
+    }
+  }
+}

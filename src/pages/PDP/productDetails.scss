@@ -1,0 +1,68 @@
+@import "../../sass/sources.scss";
+.productDetailsPage {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  .imagesChanger {
+    width: 100px;
+    img {
+      height: 70px;
+      width: 100%;
+      display: block;
+      object-fit: contain;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.5s;
+      &.showing {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      }
+    }
+  }
+  .image-wall {
+    height: 400px;
+    img {
+      object-fit: contain;
+      height: 400px;
+      width: 500px;
+    }
+  }
+  .aboutProduct {
+    width: 350px;;
+    .productCategory {
+      text-transform: capitalize;
+    }
+    .productName {
+      font-weight: normal;
+      margin-top: 10px;
+      color: #666;
+    }
+    .price {
+      margin-top: 40px;
+      h4 {
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: bold;
+        font-size: 17px;
+        margin-top: 7px;
+      }
+    }
+    button {
+      @include greenButton;
+      margin-top: 30px;
+    }
+    .description {
+      margin-top: 40PX;
+      h1,h2,h3,h4,h5,h6{
+        margin: 10px 0;
+      }
+      p { 
+        font-weight: 500;
+      }
+      li { 
+        list-style: none;
+        margin-top: 10px;
+      }
+    }
+  }
+}
