@@ -38,7 +38,7 @@ const ItemOfCart = ({ item }) => {
           </button>
         </div>
         <div className="imageContainer">
-          <img src={item.gallery[item.imgIndex]} alt="itemImage" />
+          <img src={item.gallery[item.imgIndex]} alt={item.name} />
           <div className="arrowsButtons">
             <button
               disabled={item.imgIndex === 0}

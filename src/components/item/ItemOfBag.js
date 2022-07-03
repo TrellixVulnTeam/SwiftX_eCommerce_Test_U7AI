@@ -38,7 +38,7 @@ const Item = ({ item }) => {
         </button>
       </div>
       <div className="imageContainer">
-        <img src={`${item.gallery[item.imgIndex]}`} alt="cat" />
+        <img src={`${item.gallery[item.imgIndex]}`} alt={item.name} />
         <div className="arrowsButtons">
           <button
             disabled={item.imgIndex === 0}

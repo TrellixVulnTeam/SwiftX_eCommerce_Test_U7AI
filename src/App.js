@@ -11,7 +11,6 @@ const App = () => {
   const [categorySelected, setCategorySelected] = useState("all");
   const [currencyIndex, setCurrencyIndex] = useState(0);
   const [products, setProducts] = useState([]);
-  const [productDetails, setProductDetails] = useState({});
   const [cartItems, setCartItems] = useState([]);
   const [totalSymbol, setTotalSymbol] = useState("$");
   const [listIsActive, setListIsActive] = useToggle(false);
@@ -98,8 +97,6 @@ const App = () => {
           setCategorySelected,
           products,
           setProducts,
-          productDetails,
-          setProductDetails,
           currencyIndex,
           setCurrencyIndex,
           totalSymbol,
